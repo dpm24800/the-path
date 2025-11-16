@@ -15,7 +15,7 @@ status: published
 ## Introduction
 Among the three characteristics taught by the Buddha, **anicca — impermanence** — is the most commonly mentioned yet the most misunderstood. It is often reduced to a simple idea: “everything changes.” While factually true, this understanding remains superficial and does not touch the liberating insight taught in the early Buddhist texts.
 
-In this article, based on a discussion with **Ajahn Ñāṇamoli Thero**, we explore the true depth of anicca and how it must be understood on the level of **saṅkhārās** — the underlying structures that determine experience itself.
+In this article, based on a discussion with **[Ajahn Ñāṇamoli Thero](https://www.youtube.com/watch?v=zPmfB2to2sQ)**, we explore the true depth of anicca and how it must be understood on the level of **saṅkhārās** — the underlying structures that determine experience itself.
 
 ## 1. The Common but Incorrect View: “Everything Changes”
 Many people equate anicca with the observable fact that:
@@ -91,7 +91,7 @@ The suffering does not come from “things changing,” but from being **enclose
 
 Ajahn Ñāṇamoli compares this to:
 
-### Being buried alive in a coffin with air to breathe.
+**Being buried alive in a coffin with air to breathe.**  
 You can move, think, decide, speak —
 but never escape the container that holds you.
 
@@ -106,7 +106,6 @@ Examples:
 * Neutrality feels boring → you want stimulation.
 
 In all cases:
-
 > You react to change with more wanting of change.
 
 Craving tries to escape instability by demanding more instability.
@@ -116,7 +115,6 @@ Ajahn compares this to a fish hooked on a line:
 * The deeper the hook pierces.
 
 ## 6. The Real Way Out
-
 The Buddha did not teach a way to escape the aggregates or the body.
 There is **no outside** to sensory experience. You cannot “dig a tunnel” out of your own body.
 
