@@ -108,7 +108,7 @@ df = df.drop_duplicates()
 ```python
 df = df.drop_duplicates(subset=['name', 'date'])
 ```
-
+<!-- 
 # **5. Handling Outliers**
 ### **Detect Outliers: IQR Method**
 ```python
@@ -241,8 +241,8 @@ from sklearn.preprocessing import StandardScaler
 
 scaler = StandardScaler()
 df[['salary_z']] = scaler.fit_transform(df[['salary']])
-```
-
+``` -->
+<!-- 
 ---
 
 # **12. End-to-End Example (Complete Walkthrough)**
@@ -309,7 +309,7 @@ A clean dataset ready for:
 * EDA
 * Visualization
 * Machine learning
-* Storage
+* Storage -->
 
 ---
 
