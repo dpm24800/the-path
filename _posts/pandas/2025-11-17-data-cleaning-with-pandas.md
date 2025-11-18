@@ -175,8 +175,10 @@ df['city'].replace({'Ktm': 'Kathmandu', 'KTM': 'Kathmandu'}, inplace=True)
 ```python
 df['year'] = df['text'].str.extract(r'(\d{4})')
 ```
+--->
 
-# **8. Handling Inconsistent Data**
+<!-- # **8. Handling Inconsistent Data** -->
+# 5. Handling Inconsistent Data**
 ### **Detect impossible values**
 ```python
 df[df['age'] < 0]
@@ -189,12 +191,13 @@ df[df['height'] > 250]
 df.loc[df['age'] < 0, 'age'] = df['age'].median()
 ```
 
-# **9. Feature Engineering**
+<!-- # **9. Feature Engineering** -->
+# **Feature Engineering**
 ### **Create new columns**
 ```python
 df['total_price'] = df['quantity'] * df['unit_price']
 ```
-
+<!--
 ### **Binning**
 ```python
 df['age_group'] = pd.cut(df['age'], bins=[0,18,40,60,100],
@@ -212,6 +215,7 @@ df['year'] = df['date'].dt.year
 df['month'] = df['date'].dt.month
 df['weekday'] = df['date'].dt.day_name()
 ```
+-->
 
 # **10. Renaming Columns**
 ### **Best practice**
@@ -225,6 +229,7 @@ df.columns = df.columns.str.lower().str.replace(' ', '_')
 df.rename(columns={'Sale Price': 'sale_price'}, inplace=True)
 ```
 
+<!--
 # **11. Scaling & Normalization**
 ### **Min-Max Scaling**
 ```python
@@ -313,10 +318,10 @@ A clean dataset ready for:
 
 ---
 
-# **13. Summary & Best Practices**
+# Summary & Best Practices**  
+<!-- **13. Summary & Best Practices**  -->
 
 ### **Data Cleaning Checklist**
-
 * Understand data structure
 * Handle missing values
 * Fix data types
@@ -328,7 +333,6 @@ A clean dataset ready for:
 * Engineer meaningful features
 
 ### **Best Practices**
-
 * Clean **before** modeling
 * Never drop data blindly
 * Use visualizations to detect issues
