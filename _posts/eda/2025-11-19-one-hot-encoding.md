@@ -11,8 +11,7 @@ status: published
 - One-hot encoding in Pandas is a method to convert categorical data into a numerical format suitable for machine learning algorithms. 
 - It transforms a categorical column into multiple binary columns, where each new column represents a unique category from the original column.
 
-How it works:
-
+**How it works**:
 - For each unique category in the original column, a new binary column is created.
 - In a given row, if the original value matches the category represented by a new column, that new column will have a value of 1, and all other new columns for that row will have a value of 0.
 
@@ -45,22 +44,17 @@ print("\nDataFrame after one-hot encoding 'Fruit' and 'Color' with drop_first=Tr
 print(df_encoded_multi)
 ```
 
-Explanation:
-
+**Explanation**:
 - `pd.get_dummies(df, columns=['Fruit'])`: This line applies one-hot encoding to the 'Fruit' column. It creates new columns like 'Fruit\_Apple', 'Fruit\_Banana', and 'Fruit\_Orange', replacing the original 'Fruit' column.
 - `drop_first=True`: This argument, when set to `True`, prevents multicollinearity by dropping the first category of each encoded column. For example, if you have 'Red', 'Green', 'Blue', it will create 'Green' and 'Blue' columns, and if both are 0, it implies 'Red'.
 
 When to use it:
-
 - When dealing with nominal categorical data (categories without inherent order, like colors, cities, etc.).
 - When machine learning models require numerical input.
 
-Considerations:
-
+**Considerations**:
 - **High Cardinality:** 
-
   One-hot encoding can lead to a large number of new columns if a categorical variable has many unique categories (high cardinality), potentially causing issues like the curse of dimensionality.
 
 - **Multicollinearity:** 
-
-  By default, `get_dummies` creates a column for every unique category. For some models (e.g., linear regression), this can introduce multicollinearity. `drop_first=True` can mitigate this.
+By default, `get_dummies` creates a column for every unique category. For some models (e.g., linear regression), this can introduce multicollinearity. `drop_first=True` can mitigate this.
