@@ -12,10 +12,11 @@ Database keys are fields or groups of fields that uniquely identify each row in 
 ## Key types and functions
 - **Primary Key** A field that uniquely identifies each record in a table. It can be an existing attribute or one generated specifically for the database.
 - **Foreign Key** A field in one table that references the primary key of another table. This is used to link tables together and ensure referential integrity.
-- **Candidate Key** Any attribute or set of attributes that can be used to uniquely identify a row in a table. A table can have multiple candidate keys.
+
+<!-- - **Candidate Key** Any attribute or set of attributes that can be used to uniquely identify a row in a table. A table can have multiple candidate keys.
 - **Super Key** A set of attributes that uniquely identifies each row. A super key can have additional attributes that are not necessary for unique identification.
 - **Unique Key** A key that ensures all values in a column are unique, similar to a primary key, but can allow for a single NULL value.
-- **Composite Key** A key made up of two or more columns that, when combined, uniquely identify a row. Also known as a compound key. 
+- **Composite Key** A key made up of two or more columns that, when combined, uniquely identify a row. Also known as a compound key.  -->
 
 ## Why keys are important
 - **Uniqueness:** They ensure each record is uniquely identifiable, preventing duplicate entries.

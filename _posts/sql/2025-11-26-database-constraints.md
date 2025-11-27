@@ -5,7 +5,7 @@ author: Dipak Pulami Magar
 # description: A practical, example-driven tutorial for data science & machine learning
 thumbnail: ../../../../assets/images/sql/database-constraints.png
 date:   2025-11-26 16:12:45 +0545
-categories: sql
+category: sql
 status: draft
 ---
 
@@ -15,10 +15,10 @@ Database constraints are rules enforced on data within a database to ensure its 
 Here are the most widely used constraints in SQL:
 
 **PRIMARY KEY**:  
-  Uniquely identifies each row (record) in a table. It is a combination of NOT NULL and UNIQUE constraints. Each table can have only one primary key, which serves as the main identifier for records. It consists of one or more columns and cannot contain NULL values. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Uniquely identifies each row (record) in a table. It is a combination of NOT NULL and UNIQUE constraints. Each table can have only one primary key, which serves as the main identifier for records. It consists of one or more columns and cannot contain NULL values. 
 
 **FOREIGN KEY**:  
-  Establishes a link and enforces a relationship between data in two tables. A foreign key in one table (the child table) references the primary key in another table (the parent table), ensuring that a value inserted into the foreign key column must exist in the referenced primary key column. This prevents "orphaned" records and maintains referential integrity.
+&#9;&#9;Establishes a link and enforces a relationship between data in two tables. A foreign key in one table (the child table) references the primary key in another table (the parent table), ensuring that a value inserted into the foreign key column must exist in the referenced primary key column. This prevents "orphaned" records and maintains referential integrity.
 
 **UNIQUE**:  
   Ensures that all values in a specified column or set of columns are unique across all rows in the table. Unlike a primary key, a unique constraint can allow one NULL value.
@@ -164,4 +164,5 @@ CREATE TABLE IF NOT EXISTS library (
 ### Further Readings:
 - [SQL Constraints](https://www.w3schools.com/sql/sql_constraints.asp)
 - [SQL  Constraints](https://www.geeksforgeeks.org/sql/sql-constraints/)
+- [SQL Constraints](https://www.tutorialspoint.com/sql/sql-constraints.htm)
 - [Constraints on Relational Database Model ](https://www.geeksforgeeks.org/dbms/constraints-on-relational-database-model/)

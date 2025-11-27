@@ -1,3 +1,12 @@
+---
+layout: post
+title:  Data Control Language
+author: Dipak Pulami Magar
+date:   2025-12-20 10:12:45 +0545
+categories: sql
+status: draft
+---
+
 ### **DCL (Data Control Language)**
   * **GRANT:** Giving users permissions.
   * **REVOKE:** Removing users' permissions.

@@ -1,3 +1,12 @@
+---
+layout: post
+title:  Data Manipulation Language – SQL
+author: Dipak Pulami Magar
+date:   2025-11-27 10:12:45 +0545
+categories: sql
+status: draft
+---
+
 ### 2.1. DML (Data Manipulation Language)
   * **`SELECT`:** The core of SQL.
       * Basic **SELECT** statement syntax.

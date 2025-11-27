@@ -2,7 +2,7 @@
 layout: post
 title:  "SQL – note plan"
 author: Dipak Pulami Magar
-date:   2025-11-24 10:12:45 +0545
+date:   2025-12-20 10:12:45 +0545
 categories: sql
 status: draft
 ---
@@ -14,13 +14,6 @@ status: draft
       * One-to-One, 
       * One-to-Many, 
       * Many-to-Many).
-
-
-
-
-
-
-
 
 
 ## 🔬 Advanced Querying and Functions

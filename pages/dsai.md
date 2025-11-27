@@ -2,7 +2,7 @@
 layout: page
 title: DS & AI
 # date: 2025-11-01 21:12:45 +0545
-nav_order: 1   # smaller number = appears earlier
+nav_order: 2   # smaller number = appears earlier
 permalink: /dsai/
 ---
 # Outline:
