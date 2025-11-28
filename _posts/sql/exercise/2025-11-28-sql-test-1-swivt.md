@@ -259,6 +259,7 @@ ORDER BY ord_date;
 **11. Max Purchase Amount by Customer and Order Date (2000-6000)**
 
 ```sql
+-- 11. Max Purchase Amount by Customer and Order Date (2000-6000)
 SELECT customer_id, ord_date, purch_amt
 FROM Orders
 WHERE purch_amt >= 2000 AND purch_amt <=6000
