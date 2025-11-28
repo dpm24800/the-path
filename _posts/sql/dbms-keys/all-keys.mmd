@@ -1,0 +1,44 @@
+flowchart TD
+    %% Key Definitions and Relationships (Subset Hierarchy) %%
+
+    subgraph Identification Keys
+        A[Super Key]
+        B[Candidate Key]
+        C[Primary Key]
+        D[Alternate Key]
+
+        %% Hierarchy: Candidate Key is a minimal Super Key, PK/AK are Candidate Keys %%
+        A --> B
+        B --> C
+        B --> D
+
+        %% Composite and Surrogate are types of Primary Key based on structure/nature %%
+        C --> G(Composite Key: PK made of >1 column)
+        C --> H(Surrogate Key: PK with no business meaning)
+
+        %% Unique Key (can be Candidate, Primary, or Alternate Key) - ensures uniqueness %%
+        E[Unique Key]
+
+        %% Every Candidate Key must also be a Unique Key, but not vice-versa (nulls allowed in non-PK Unique Keys) %%
+        B --> E
+        E -- optional --> F[Can allow NULLs (Non-PK Unique Key)]
+        C -- is a type of --> E
+    end
+
+    %% Relationship Keys %%
+    I[Foreign Key] 
+    
+    %% Foreign Key references the Primary Key (or sometimes a Unique Key) of another table %%
+    C --> I
+    E -- sometimes references --> I
+
+    %% Legend for Clarity (Simplified) %%
+    subgraph LEGEND
+        A -- "contains" --> B
+        B -- "is selected as" --> C
+        B -- "is remaining as" --> D
+        C -- "can be a type of" --> G
+        C -- "can be a type of" --> H
+        C -- "is referenced by" --> I
+        B -- "is a type of" --> E
+    end

@@ -1,0 +1,17 @@
+flowchart TD
+    %% Super Key %%
+    A[Super Key] --> B[Candidate Key]
+
+    %% Candidate Key splits %%
+    B --> C[Primary Key]
+    B --> D[Alternate Key]
+
+    %% Unique Key (can overlap) %%
+    C --> E[Unique Key]
+    D --> E
+
+    %% Foreign Key %%
+    C --> F[Foreign Key]
+
+    %% Composite Key %%
+    G[Composite Key] --> C

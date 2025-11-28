@@ -16,15 +16,15 @@ However: **“key” does not always mean “unique identifier among all keys.�
 ## Main Types of Keys in DBMS
 Here are the principal key types used in relational databases, along with their definitions and roles. ([BYJU'S][2])
 
-| Key Type                                             | Definition & Purpose |
-| ---------------------------------------------------- | ------------------------- |
-| **Super Key**                                        | Any set of attributes (one or more columns) that **can uniquely identify** each tuple (row) in the table. A “super key” might contain extra, unnecessary attributes beyond what’s strictly needed. ([Wikipedia][3])                                                                                                                                              |
-| **Candidate Key**                                    | A **minimal** super key — i.e. a smallest set of attributes that still uniquely identifies each row. No subset of a candidate key should itself uniquely identify rows. Tables may have multiple candidate keys. ([Wikipedia][4])                                                                                                                                |
-| **Primary Key**                                      | One chosen candidate key per table, designated as the main identifier for rows. Must be unique for each row and usually cannot be NULL. Chosen by database designer or DBA. ([Wikipedia][5])                                                                                                                                                                     |
-| **Alternate Key** (or **Unique Key**)                | Candidate keys that were not selected as the primary key. They still uniquely identify each row; databases often enforce them via a `UNIQUE` constraint. Alternate/Unique keys give additional ways to identify or query data. ([Wikipedia][6])                                                                                                                  |
-| **Composite Key** (or Compound Key)                  | A key made up of **two or more attributes together**. Used when no single column suffices to uniquely identify rows, but the combination does. Composite keys can be candidate, primary, or alternate keys. ([BYJU'S][2])                                                                                                                                        |
-| **Foreign Key**                                      | An attribute (or set of attributes) in one table that **references** (points to) the primary key (or candidate key) of another table. Foreign keys are used to **establish relationships between tables** and enforce referential integrity. Not necessarily unique in the referencing table; can repeat or even be NULL (depending on design). ([Wikipedia][7]) |
-| *(Sometimes)* **Surrogate Key** or **Secondary Key** | A surrogate key is an artificially generated identifier (e.g. auto-increment ID) used when no natural candidate key is suitable. Secondary key often refers to non-key attributes used for indexing or search, and might not guarantee uniqueness. ([upGrad][8])                                                                                                 |
+| Key Type   | Definition & Purpose |
+| ---------  | ---------------------|
+| Super Key | Any set of attributes (one or more columns) that **can uniquely identify** each tuple (row) in the table. A “super key” might contain extra, unnecessary attributes beyond what’s strictly needed. ([Wikipedia][3])|
+| Candidate Key | A **minimal** super key — i.e. a smallest set of attributes that still uniquely identifies each row. No subset of a candidate key should itself uniquely identify rows. Tables may have multiple candidate keys. ([Wikipedia][4])|
+| Primary Key | One chosen candidate key per table, designated as the main identifier for rows. Must be unique for each row and usually cannot be NULL. Chosen by database designer or DBA. ([Wikipedia][5])|
+| Alternate Key (or **Unique Key**) | Candidate keys that were not selected as the primary key. They still uniquely identify each row; databases often enforce them via a `UNIQUE` constraint. Alternate/Unique keys give additional ways to identify or query data. ([Wikipedia][6])|
+| **Composite Key** (or Compound Key) | A key made up of **two or more attributes together**. Used when no single column suffices to uniquely identify rows, but the combination does. Composite keys can be candidate, primary, or alternate keys. ([BYJU'S][2])|
+| **Foreign Key** | An attribute (or set of attributes) in one table that **references** (points to) the primary key (or candidate key) of another table. Foreign keys are used to **establish relationships between tables** and enforce referential integrity. Not necessarily unique in the referencing table; can repeat or even be NULL (depending on design). ([Wikipedia][7])|
+| *(Sometimes)* **Surrogate Key** or **Secondary Key** | A surrogate key is an artificially generated identifier (e.g. auto-increment ID) used when no natural candidate key is suitable. Secondary key often refers to non-key attributes used for indexing or search, and might not guarantee uniqueness. ([upGrad][8])|
 
 ---
 
@@ -52,8 +52,7 @@ To understand how these key types relate to each other, here’s a conceptual hi
 
 Hence, all candidate keys are super keys; but not all super keys are candidate keys. ([Wikipedia][3])
 
-## 🧩 Examples to Illustrate Different Keys
-
+## Examples to Illustrate Different Keys
 Consider a table `STUDENT` with columns: `student_id`, `email`, `phone_number`, `full_name`, `date_of_birth`.
 
 * Suppose `student_id` and `email` are both guaranteed unique. Then `{student_id}` and `{email}` are both **candidate keys**.
@@ -65,7 +64,6 @@ Consider a table `STUDENT` with columns: `student_id`, `email`, `phone_number`, 
 Such design — using different key types appropriately — avoids duplicates, supports integrity, and allows flexible queries.
 
 ## Common Mistakes / Misconceptions About “Key”
-
 Because many of the key types (Primary, Candidate, Unique) guarantee uniqueness, beginners sometimes assume: **“key = unique key always.”** But that’s incorrect.
 
 * A **super key** may include redundant attributes — it's not necessarily minimal.
@@ -76,28 +74,25 @@ Because many of the key types (Primary, Candidate, Unique) guarantee uniqueness,
 Understanding these distinctions is vital for good database design.
 
 ## Why Understanding Keys Matters — From DB Design to Real Projects
-
 * **Data integrity**: Keys prevent duplicate rows and enforce uniqueness (for candidate/primary/unique keys).
 * **Relationships**: Foreign keys establish reliable links between tables — e.g. between users and orders, students and enrollments.
 * **Performance & Querying**: Proper keys (especially primary/unique) help indexing, which speeds up lookups.
 * **Maintainability & Stability**: Good key design (with surrogate keys or stable natural keys) makes schema evolution easier.
 * **Normalization**: Keys help in structuring data to reduce redundancy (e.g. by splitting tables and linking via foreign keys).
 
-For someone like you — learning databases (or building systems, e.g. for AI/ML projects with data storage) — being clear about keys is essential.
-
-[1]: https://airbyte.com/data-engineering-resources/database-keys?utm_source=chatgpt.com "What are Database Keys and their Types?"
-[2]: https://byjus.com/gate/types-of-keys-in-dbms/?utm_source=chatgpt.com "Types of Keys in DBMS"
-[3]: https://en.wikipedia.org/wiki/Superkey?utm_source=chatgpt.com "Superkey"
-[4]: https://en.wikipedia.org/wiki/Candidate_key?utm_source=chatgpt.com "Candidate key"
-[5]: https://en.wikipedia.org/wiki/Primary_key?utm_source=chatgpt.com "Primary key"
-[6]: https://en.wikipedia.org/wiki/Unique_key?utm_source=chatgpt.com "Unique key"
-[7]: https://en.wikipedia.org/wiki/Foreign_key?utm_source=chatgpt.com "Foreign key"
-[8]: https://www.upgrad.com/blog/types-of-keys-in-dbms/?utm_source=chatgpt.com "8 Types of Keys in DBMS – Beginner's Guide to Data Integrity"
+[1]: https://airbyte.com/data-engineering-resources/database-keys "What are Database Keys and their Types?"
+[2]: https://byjus.com/gate/types-of-keys-in-dbms/ "Types of Keys in DBMS"
+[3]: https://en.wikipedia.org/wiki/Superkey "Superkey"
+[4]: https://en.wikipedia.org/wiki/Candidate_key "Candidate key"
+[5]: https://en.wikipedia.org/wiki/Primary_key "Primary key"
+[6]: https://en.wikipedia.org/wiki/Unique_key "Unique key"
+[7]: https://en.wikipedia.org/wiki/Foreign_key "Foreign key"
+[8]: https://www.upgrad.com/blog/types-of-keys-in-dbms/ "8 Types of Keys in DBMS – Beginner's Guide to Data Integrity"
 
 
 --- 
 
-Database keys are fields or groups of fields that **uniquely identify each row in a table**, establish relationships between tables, and maintain data integrity. 
+
 
 Common types include the **primary key**, which uniquely identifies each row, and the **foreign key**, which links tables together by referencing a primary key. Other important keys include the candidate key, super key, unique key, and composite key. 
 

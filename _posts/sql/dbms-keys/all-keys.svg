@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600">
+  <!-- Super Key -->
+  <rect x="50" y="20" width="150" height="50" fill="#1f1f1f" stroke="#ccc" stroke-width="2"/>
+  <text x="125" y="50" fill="#fff" font-family="Arial" font-size="12" text-anchor="middle">Super Key</text>
+
+  <!-- Candidate Key -->
+  <rect x="300" y="20" width="150" height="50" fill="#1f1f1f" stroke="#ccc" stroke-width="2"/>
+  <text x="375" y="50" fill="#fff" font-family="Arial" font-size="12" text-anchor="middle">Candidate Key</text>
+
+  <!-- Primary Key -->
+  <rect x="550" y="20" width="150" height="50" fill="#1f1f1f" stroke="#ccc" stroke-width="2"/>
+  <text x="625" y="50" fill="#fff" font-family="Arial" font-size="12" text-anchor="middle">Primary Key</text>
+
+  <!-- Alternate Key -->
+  <rect x="550" y="100" width="150" height="50" fill="#1f1f1f" stroke="#ccc" stroke-width="2"/>
+  <text x="625" y="130" fill="#fff" font-family="Arial" font-size="12" text-anchor="middle">Alternate Key</text>
+
+  <!-- Unique Key -->
+  <rect x="700" y="60" width="150" height="50" fill="#1f1f1f" stroke="#ccc" stroke-width="2"/>
+  <text x="775" y="90" fill="#fff" font-family="Arial" font-size="12" text-anchor="middle">Unique Key</text>
+
+  <!-- Foreign Key -->
+  <rect x="300" y="100" width="150" height="50" fill="#1f1f1f" stroke="#ccc" stroke-width="2"/>
+  <text x="375" y="130" fill="#fff" font-family="Arial" font-size="12" text-anchor="middle">Foreign Key</text>
+
+  <!-- Composite Key -->
+  <rect x="50" y="100" width="150" height="50" fill="#1f1f1f" stroke="#ccc" stroke-width="2"/>
+  <text x="125" y="130" fill="#fff" font-family="Arial" font-size="12" text-anchor="middle">Composite Key</text>
+
+  <!-- Surrogate Key -->
+  <rect x="300" y="200" width="150" height="50" fill="#1f1f1f" stroke="#ccc" stroke-width="2"/>
+  <text x="375" y="230" fill="#fff" font-family="Arial" font-size="12" text-anchor="middle">Surrogate Key</text>
+
+  <!-- Arrows -->
+  <line x1="200" y1="45" x2="300" y2="45" stroke="#ccc" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="450" y1="45" x2="550" y2="45" stroke="#ccc" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="375" y1="70" x2="625" y2="100" stroke="#ccc" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="375" y1="70" x2="625" y2="130" stroke="#ccc" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="625" y1="45" x2="375" y2="125" stroke="#ccc" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="125" y1="125" x2="375" y2="200" stroke="#ccc" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Arrowhead definition -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#ccc" />
+    </marker>
+  </defs>
+</svg>

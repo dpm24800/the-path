@@ -1,0 +1,36 @@
+flowchart LR
+    subgraph Key Definitions and Examples
+        A[Super Key: <br/>EmployeeID, Email, NationalID, <br/>(EmployeeID + Email, etc.)]
+        B[Candidate Key: <br/>EmployeeID, Email, NationalID]
+        C(Primary Key: <br/>EmployeeID)
+        D(Alternate Key: <br/>Email, NationalID)
+        E{Unique Key: <br/>Email, NationalID}
+        F[Foreign Key: <br/>DepartmentID <br/>→ Departments(DepartmentID)]
+        G[Composite Key: <br/>EmployeeID + ProjectID]
+        H[Surrogate Key: <br/>EmployeeID (auto-increment)]
+    end
+
+    %% Hierarchy/Relationships based on typical logic
+    
+    %% Super Key to Candidate Key (Minimality)
+    A -- contains minimal --> B
+    
+    %% Candidate Key split (Selection)
+    B -- chosen as --> C
+    B -- remaining as --> D
+    
+    %% PK and AK are types of Candidate Keys
+    C -- is a type of --> E
+    D -- is a type of --> E
+
+    %% PK is referenced by FK
+    C -- referenced by --> F
+    
+    %% Composite and Surrogate are types/attributes of a Primary Key
+    G -- is often a type of --> C
+    H -- is often a type of --> C
+
+    %% Additional Links observed in the SVG's arrows, interpreted as dependencies:
+    %% The link from PK (C) to FK (F) in the original SVG is maintained as reference.
+    %% The link from Composite Key (G) to Surrogate Key (H) is unusual but mapped:
+    G --> H
