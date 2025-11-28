@@ -1,16 +1,16 @@
 ---
 layout: post
-title: SQL Test – Swivt
+title: SQL Test 1 – Swivt
 description: 
-# thumbnail: ../../../../assets/images/sql/dbms-keys.png
+thumbnail: ../../../../../assets/images/sql/sql-test.png
 author: Dipak Pulami Magar
 date :  2025-11-28 12:12:45 +0545
 categories: sql test
 status: draft
 ---
 
+**Table**: Orders
 ```
-Table: Orders
 +---------+-----------+------------+-------------+-------------+
 | ord_no  | purch_amt | ord_date   | customer_id | salesman_id |
 +---------+-----------+------------+-------------+-------------+
@@ -62,26 +62,49 @@ INSERT INTO orders (order_no, purch_amt, ord_date, customer_id, salesman_id) VAL
 **2. Calculate Total Purchase Amount of All Orders**
 
 ```sql
--- 2. Calculate Total Purchase Amount of All Orders: 17541.180145263672
+-- 2. Calculate Total Purchase Amount of All Orders: 22541.180145263672
 SELECT SUM(purch_amt) AS `Total Purchase Amount` 
 FROM Orders;
+```
+**Output**:  
+```
++-----------------------+
+| Total Purchase Amount |
++-----------------------+
+|    22541.180145263672 |
++-----------------------+
 ```
 **3. Calculate Average Purchase Amount of All Orders**
 
 ```sql
--- 3. Calculate Average Purchase Amount of All Orders: 1461.765012105306
+-- 3. Calculate Average Purchase Amount of All Orders: 1733.9369342510518
 SELECT AVG(purch_amt) AS `Average Purchase Amount` 
 FROM Orders;
+```
+**Output**:
+```
++-------------------------+
+| Average Purchase Amount |
++-------------------------+
+|      1733.9369342510518 |
++-------------------------+
 ```
 
 **4. Count the Number of Unique Salespeople**
 
 ```sql
--- 4. Count the Number of Unique Salespeople
+-- 4. Count the Number of Unique Salespeople: 6
 SELECT COUNT(DISTINCT salesman_id) AS `Number of Unique Salespeople`
 FROM Orders;
 ```
-
+**Output**:  
+```
++------------------------------+
+| Number of Unique Salespeople |
++------------------------------+
+|                            6 |
++------------------------------+
+```
 **5. Find Maximum Purchase Amount**
 
 ```sql
@@ -89,13 +112,28 @@ FROM Orders;
 SELECT MAX(purch_amt) AS `Maximum Purchase Amount`
 FROM Orders;
 ```
-
+**Output**:  
+```
++-------------------------+
+| Maximum Purchase Amount |
++-------------------------+
+|                    5760 |
++-------------------------+
+```
 **6. Find Minimum Purchase Amount**
 
 ```sql
--- 6. Find Minimum Purchase Amount: 65.26
+-- 6. Find Minimum Purchase Amount: 5760
 SELECT MIN(purch_amt) AS `Minimum Purchase Amount`
 FROM Orders;
+```
+**Output**:  
+```
++-------------------------+
+| Maximum Purchase Amount |
++-------------------------+
+|                    5760 |
++-------------------------+
 ```
 
 **7. Find Highest Purchase Amount Ordered by Each Customer**
@@ -106,6 +144,21 @@ SELECT customer_id, MAX(purch_amt) AS `Highest Purchase Amount`
 FROM Orders
 GROUP BY customer_id
 ORDER BY customer_id;
+```
+**Output**:  
+```
++-------------+-------------------------+
+| customer_id | Highest Purchase Amount |
++-------------+-------------------------+
+|        3001 |                  270.65 |
+|        3002 |                    5760 |
+|        3003 |                   75.29 |
+|        3004 |                    5000 |
+|        3005 |                   948.5 |
+|        3007 |                  2400.6 |
+|        3008 |                  250.45 |
+|        3009 |                  2480.4 |
++-------------+-------------------------+
 ```
 
 **8. Highest Purchase by Customer on Date**
@@ -118,6 +171,25 @@ GROUP BY ord_date, customer_id
 ORDER BY ord_date ASC, customer_id ASC;
 ```
 
+**Output**:  
+```
++------------+-------------+------------------------+
+| ord_date   | customer_id | Higest Purchase Amount |
++------------+-------------+------------------------+
+| 2012-04-25 |        3002 |                 3045.6 |
+| 2012-06-27 |        3008 |                 250.45 |
+| 2012-07-27 |        3007 |                 2400.6 |
+| 2012-08-17 |        3003 |                  75.29 |
+| 2012-08-17 |        3009 |                  110.5 |
+| 2012-09-10 |        3001 |                 270.65 |
+| 2012-09-10 |        3002 |                   5760 |
+| 2012-09-10 |        3005 |                  948.5 |
+| 2012-10-05 |        3002 |                  65.26 |
+| 2012-10-05 |        3005 |                  150.5 |
+| 2012-10-10 |        3004 |                   5000 |
+| 2012-10-10 |        3009 |                 2480.4 |
++------------+-------------+------------------------+
+```
 **9.  Highest Purchase Amount by Salesperson on '2012-08-17'**
 
 ```sql
@@ -127,6 +199,15 @@ FROM Orders
 WHERE ord_date = '2012-08-17'
 ORDER BY salesman_id
 LIMIT 1;
+```
+
+**Output**:  
+```
++------------+-------------+-----------+
+| ord_date   | salesman_id | purch_amt |
++------------+-------------+-----------+
+| 2012-08-17 |        5003 |     110.5 |
++------------+-------------+-----------+
 ```
 
 **10. Purchase Amount >= 2100 by Customer on Specific Date**
@@ -139,12 +220,40 @@ WHERE purch_amt >= 2100
 ORDER BY ord_date;
 ```
 
+**Output**:  
+```
++-------------+------------+-----------+
+| customer_id | ord_date   | purch_amt |
++-------------+------------+-----------+
+|        3002 | 2012-04-25 |    3045.6 |
+|        3007 | 2012-07-27 |    2400.6 |
+|        3002 | 2012-09-10 |      5760 |
+|        3009 | 2012-10-10 |    2480.4 |
+|        3004 | 2012-10-10 |      5000 |
++-------------+------------+-----------+
+```
+
 ```sql
 -- (Date-wise highest)
 SELECT ord_date, MAX(purch_amt) AS highest_purch_amount
 FROM Orders
 GROUP BY ord_date
 ORDER BY ord_date;
+```
+
+**Output**:  
+```
++------------+----------------------+
+| ord_date   | highest_purch_amount |
++------------+----------------------+
+| 2012-04-25 |               3045.6 |
+| 2012-06-27 |               250.45 |
+| 2012-07-27 |               2400.6 |
+| 2012-08-17 |                110.5 |
+| 2012-09-10 |                 5760 |
+| 2012-10-05 |                150.5 |
+| 2012-10-10 |                 5000 |
++------------+----------------------+
 ```
 
 **11. Max Purchase Amount by Customer and Order Date (2000-6000)**
@@ -156,6 +265,19 @@ WHERE purch_amt >= 2000 AND purch_amt <=6000
 ORDER BY ord_date;
 ```
 
+**Output**:  
+```
++-------------+------------+-----------+
+| customer_id | ord_date   | purch_amt |
++-------------+------------+-----------+
+|        3002 | 2012-04-25 |    3045.6 |
+|        3007 | 2012-07-27 |    2400.6 |
+|        3002 | 2012-09-10 |      5760 |
+|        3009 | 2012-10-10 |    2480.4 |
+|        3004 | 2012-10-10 |      5000 |
++-------------+------------+-----------+
+```
+
 **12. Count Orders on '2012-08-17'**
 
 ```sql
@@ -163,6 +285,14 @@ ORDER BY ord_date;
 SELECT COUNT(order_no)
 FROM Orders
 WHERE ord_date = '2012-08-17';
+```
+**Output**:  
+```
++-----------------+
+| COUNT(order_no) |
++-----------------+
+|               2 |
++-----------------+
 ```
 
 <center> * * * </center>
