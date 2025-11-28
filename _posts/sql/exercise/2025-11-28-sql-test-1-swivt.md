@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SQL Test 1 – Swivt
+title: SQL Test – 1
 description: 
 thumbnail: ../../../../../assets/images/sql/sql-test.png
 author: Dipak Pulami Magar
