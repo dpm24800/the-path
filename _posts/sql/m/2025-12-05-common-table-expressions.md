@@ -8,7 +8,9 @@ date :  2025-12-05 14:12:45 +0545
 categories: sql
 status: draft
 ---
-**Common Table Expressions (CTEs)** is a powerful technique for simplifying complex queries, improving readability, and enabling recursive logic. CTEs define a temporary, named result set that exists only for the duration of a single query.
+
+- **Common Table Expressions (CTEs)** is a powerful technique for simplifying complex queries, improving readability, and enabling recursive logic. 
+- CTEs define a temporary, named result set that exists only for the duration of a single query.
 
 ## Syntax
 A CTE is always introduced by the `WITH` keyword, followed by the CTE's name, the `AS` keyword, and the defining `SELECT` statement enclosed in parentheses.
@@ -74,16 +76,16 @@ Instead of using a non-reusable subquery in the FROM clause, a CTE provides a cl
 **Goal:** Find all employees whose salary is above the average salary for their respective department.
 
 ```sql
-WITH DepartmentAverage AS (
+WITH department_average AS (
     -- CTE to calculate the average salary for each department
-    SELECT DepartmentID, AVG(Salary) AS AvgDepartmentSalary
-    FROM Employees
-    GROUP BY DepartmentID
+    SELECT department_id, AVG(salary) AS avg_department_salary
+    FROM employees
+    GROUP BY department_id
 )
-SELECT e.Name, e.Salary, d.AvgDepartmentSalary
-FROM Employees e
-JOIN DepartmentAverage d ON e.DepartmentID = d.DepartmentID
-WHERE e.Salary > d.AvgDepartmentSalary;
+SELECT e.name, e.salary, d.department_average
+FROM employees e
+JOIN department_average d ON e.department_id = d.department_id
+WHERE e.salary > d.avg_department_salary;
 ```
 
   * **Without CTE:** This would require calculating the `DepartmentAverage` in a subquery and joining to it, or using an expensive correlated subquery in the WHERE clause. The CTE makes the logic easy to follow: first, get the average, then use it to filter the employees.
