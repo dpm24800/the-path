@@ -8,7 +8,6 @@ date :  2025-12-05 14:12:45 +0545
 categories: sql
 status: draft
 ---
-
 **Common Table Expressions (CTEs)** is a powerful technique for simplifying complex queries, improving readability, and enabling recursive logic. CTEs define a temporary, named result set that exists only for the duration of a single query.
 
 ## Syntax
@@ -18,8 +17,7 @@ A CTE is always introduced by the `WITH` keyword, followed by the CTE's name, th
 The most basic structure involves a single CTE followed by the main query that references it:
 
 ```sql
-WITH cte_name (column1, column2, ...)  -- Column list is optional
-AS (
+WITH cte_name (column1, column2, ...) AS (  -- Column list is optional
     -- The defining SELECT statement (the temporary result set)
     SELECT col_a, col_b
     FROM source_table
@@ -78,31 +76,21 @@ Instead of using a non-reusable subquery in the FROM clause, a CTE provides a cl
 ```sql
 WITH DepartmentAverage AS (
     -- CTE to calculate the average salary for each department
-    SELECT
-        DepartmentID,
-        AVG(Salary) AS AvgDepartmentSalary
-    FROM
-        Employees
-    GROUP BY
-        DepartmentID
+    SELECT DepartmentID, AVG(Salary) AS AvgDepartmentSalary
+    FROM Employees
+    GROUP BY DepartmentID
 )
-SELECT
-    e.Name,
-    e.Salary,
-    d.AvgDepartmentSalary
-FROM
-    Employees e
-JOIN
-    DepartmentAverage d ON e.DepartmentID = d.DepartmentID
-WHERE
-    e.Salary > d.AvgDepartmentSalary;
+SELECT e.Name, e.Salary, d.AvgDepartmentSalary
+FROM Employees e
+JOIN DepartmentAverage d ON e.DepartmentID = d.DepartmentID
+WHERE e.Salary > d.AvgDepartmentSalary;
 ```
 
   * **Without CTE:** This would require calculating the `DepartmentAverage` in a subquery and joining to it, or using an expensive correlated subquery in the WHERE clause. The CTE makes the logic easy to follow: first, get the average, then use it to filter the employees.
 
 -----
 
-### 2\. Chaining CTEs for Step-by-Step Logic
+### 2. Chaining CTEs for Step-by-Step Logic
 
 CTEs are excellent for multi-step processing where the output of one step is the input for the next.
 
@@ -111,42 +99,28 @@ CTEs are excellent for multi-step processing where the output of one step is the
 ```sql
 WITH HighEarningManagers AS (
     -- Step 1: Identify managers earning $90,000 or more
-    SELECT
-        EmployeeID AS ManagerID,
-        Name AS ManagerName
-    FROM
-        Employees
-    WHERE
-        Salary >= 90000
+    SELECT EmployeeID AS ManagerID, Name AS ManagerName
+    FROM Employees
+    WHERE Salary >= 90000
 ),
 EmployeeDetails AS (
     -- Step 2: Join HighEarningManagers with the Employees table
     -- to find their direct reports.
-    SELECT
-        e.Name AS EmployeeName,
-        e.Salary AS EmployeeSalary,
-        m.ManagerName
-    FROM
-        Employees e
-    JOIN
-        HighEarningManagers m ON e.ManagerID = m.ManagerID
+    SELECT e.Name AS EmployeeName, e.Salary AS EmployeeSalary, m.ManagerName
+    FROM Employees e
+    JOIN HighEarningManagers m ON e.ManagerID = m.ManagerID
 )
 -- Final Query: Select the required information
-SELECT
-    EmployeeName,
-    EmployeeSalary,
-    ManagerName
-FROM
-    EmployeeDetails
-ORDER BY
-    ManagerName, EmployeeSalary DESC;
+SELECT EmployeeName, EmployeeSalary, ManagerName
+FROM EmployeeDetails
+ORDER BY ManagerName, EmployeeSalary DESC;
 ```
 
   * **Clarity:** The chained CTEs clearly delineate the two logical steps: finding the managers, then finding their reports.
 
 -----
-
-### 3\. Recursive CTEs for Hierarchical Data
+<!-- 
+### 3. Recursive CTEs for Hierarchical Data
 
 The WITH clause is **mandatory** for **recursive queries** using the WITH RECURSIVE keyword. This is typically used to traverse organizational charts, bill of materials, or network paths.
 
@@ -155,15 +129,9 @@ The WITH clause is **mandatory** for **recursive queries** using the WITH RECURS
 ```sql
 WITH RECURSIVE OrganizationHierarchy AS (
     -- Anchor Member (The initial starting point for the recursion)
-    SELECT
-        EmployeeID,
-        Name,
-        ManagerID,
-        1 AS Level
-    FROM
-        Employees
-    WHERE
-        EmployeeID = 101
+    SELECT EmployeeID, Name, ManagerID, 1 AS Level
+    FROM Employees
+    WHERE EmployeeID = 101
 
     UNION ALL
 
@@ -193,7 +161,7 @@ FROM
   * **Recursive Member:** The second SELECT statement, which references the CTE itself (OrganizationHierarchy), is repeatedly executed until it returns an empty result set (i.e., when ManagerID is NULL).
   * **Note:** The exact syntax for recursive CTEs can vary slightly between database systems (e.g., PostgreSQL, MySQL, SQL Server).
 
------
+----- -->
 
 ## Key Rules and Considerations
 * **Scope**: A CTE is temporary and can **only** be used within the single SELECT, INSERT, UPDATE, DELETE, or MERGE statement immediately following the WITH clause. It cannot be referenced by other, separate queries.
@@ -206,10 +174,8 @@ FROM
 ```sql
 -- Example: Delete employees who report to a specific manager
 WITH EmployeesToDelete AS (
-    SELECT
-        EmployeeID
-    FROM
-        Employees
+    SELECT EmployeeID
+    FROM Employees
     WHERE
         ManagerID = 104
 )
@@ -281,7 +247,9 @@ SELECT p.product_name, p.unit_price
 FROM products p
 CROSS JOIN avg_unit_price a
 WHERE p.unit_price > a.avg_unit_price;
+```
 
+```sql
 -- by category
 WITH avg_unit_price AS(
 	SELECT category_id, AVG(unit_price) avg_unit_price
