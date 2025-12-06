@@ -1,0 +1,48 @@
+erDiagram
+    PATIENTS {
+        INT patient_id PK
+        VARCHAR name
+        INT age
+        VARCHAR gender
+        VARCHAR phone
+        VARCHAR address
+    }
+
+    DOCTORS {
+        INT doctor_id PK
+        VARCHAR name
+        VARCHAR specialty
+        VARCHAR phone
+        VARCHAR department
+    }
+
+    APPOINTMENTS {
+        INT appointment_id PK
+        INT patient_id FK
+        INT doctor_id FK
+        DATE appointment_date
+        VARCHAR status
+    }
+
+    PRESCRIPTIONS {
+        INT prescription_id PK
+        INT appointment_id FK
+        VARCHAR medicine_name
+        VARCHAR dosage
+        INT duration_days
+        VARCHAR notes
+    }
+
+    MEDICAL_TESTS {
+        INT test_id PK
+        INT appointment_id FK
+        VARCHAR test_name
+        DATE test_date
+        VARCHAR result
+    }
+
+    %% Relationships
+    PATIENTS ||--o{ APPOINTMENTS : has
+    DOCTORS ||--o{ APPOINTMENTS : attends
+    APPOINTMENTS ||--o{ PRESCRIPTIONS : gives
+    APPOINTMENTS ||--o{ MEDICAL_TESTS : orders
