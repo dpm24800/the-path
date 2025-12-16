@@ -2,7 +2,7 @@
 layout: post
 title:  Python time Module
 description: Complete Guide with Examples
-thumbnail: /assets/image/python/time-module.png
+thumbnail: /assets/images/python/time-module.png
 author: Dipak Pulami Magar
 date:   2025-12-16 10:12:45 +0545
 categories: python modules
