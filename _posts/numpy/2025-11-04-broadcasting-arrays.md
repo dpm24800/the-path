@@ -1,13 +1,11 @@
 ---
 layout: post
-title:  "Broadcasting Arrays – NumPy"
-date:   2025-11-05 12:12:45 +0545
+title: Broadcasting Arrays – NumPy
+thumbnail: /assets/images/numpy/numpy-logo.png
+date: 2025-11-05 12:12:45 +0545
 categories: numpy
 ---
-<center>
-<!-- ![numpy-logo](../../../../assets/numpy-logo.png) -->
-<img src="../../../../assets/images/numpy-logo.png">
-</center>
+
 
 ## What Is Broadcasting?
 **Broadcasting** is a mechanism that allows NumPy to apply operations (like addition, subtraction, multiplication, etc.) on arrays of **different shapes** by **automatically expanding** the smaller array so that both arrays have compatible shapes.

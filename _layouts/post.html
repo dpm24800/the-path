@@ -35,7 +35,7 @@ layout: default
     {%- if page.thumbnail -%}
     <!-- {% assign id = page.youtube | split: '?v=' | last %} -->
     <div class="image-thumbnail">
-      <img class="thumbnail" src="{{page.thumbnail}}">
+      <img class="thumbnail" src="{{ page.thumbnail | relative_url }}" alt="">
     </div>
 
     <!-- <center>  
