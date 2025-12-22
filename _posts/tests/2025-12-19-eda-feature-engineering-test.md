@@ -2,10 +2,10 @@
 layout: post
 title:  EDA and Feature Engineering Test
 description: 
-# thumbnail: /assets/images/matplotlib/right-skewed-histogram.png
+thumbnail: /assets/images/eda/eda-test.png
 author: Dipak Pulami Magar
 date:   2025-12-19 16:12:45 +0545
-categories: test pandas
+categories: test eda
 status: published
 ---
 <center><h2>Section A: Multiple Choice Questions (12 x 0.5 = 6 marks)</h2></center>
