@@ -452,6 +452,25 @@ for email, pred, prob in zip(test_emails, predictions, probabilities):
     print("Prediction:", pred)
     print("Class probabilities:", prob)
 ```
+
+Output:
+```py
+Email: win meeting
+Prediction: Not Spam
+Class probabilities: [0.53840473 0.46159527]
+
+Email: claim free prize now
+Prediction: Spam
+Class probabilities: [0.05364601 0.94635399]
+
+Email: project meeting today
+Prediction: Not Spam
+Class probabilities: [0.98266508 0.01733492]
+
+Email: deadline schedule
+Prediction: Not Spam
+Class probabilities: [0.82349619 0.17650381]
+```
 ------
 
 ```py
@@ -514,7 +533,38 @@ for i in range(len(input_data)):
     print(f"P(Yes|{feat['Outlook']}, {feat['Temperature']}, {feat['Humidity']}, {feat['Wind']}) = {probs[i][1]:.4f}")
     print("Predicted PlayTennis:", "No" if preds[i]==0 else "Yes")
 ```
+Output:
+```
+Prediction 1:
+{'Outlook': 'Sunny', 'Temperature': 'Hot', 'Humidity': 'High', 'Wind': 'Weak'}
+P(No|Sunny, Hot, High, Weak)  = 0.8007
+P(Yes|Sunny, Hot, High, Weak) = 0.1993
+Predicted PlayTennis: No
 
+Prediction 2:
+{'Outlook': 'Rain', 'Temperature': 'Mild', 'Humidity': 'Normal', 'Wind': 'Weak'}
+P(No|Rain, Mild, Normal, Weak)  = 0.0547
+P(Yes|Rain, Mild, Normal, Weak) = 0.9453
+Predicted PlayTennis: Yes
+
+Prediction 3:
+{'Outlook': 'Overcast', 'Temperature': 'Hot', 'Humidity': 'High', 'Wind': 'Weak'}
+P(No|Overcast, Hot, High, Weak)  = 0.0130
+P(Yes|Overcast, Hot, High, Weak) = 0.9870
+Predicted PlayTennis: Yes
+
+Prediction 4:
+{'Outlook': 'Sunny', 'Temperature': 'Cool', 'Humidity': 'Normal', 'Wind': 'Strong'}
+P(No|Sunny, Cool, Normal, Strong)  = 0.3730
+P(Yes|Sunny, Cool, Normal, Strong) = 0.6270
+Predicted PlayTennis: Yes
+
+Prediction 5:
+{'Outlook': 'Rain', 'Temperature': 'Cool', 'Humidity': 'High', 'Wind': 'Strong'}
+P(No|Rain, Cool, High, Strong)  = 0.6269
+P(Yes|Rain, Cool, High, Strong) = 0.3731
+Predicted PlayTennis: No
+```
 ## 8. Advantages of Naive Bayes
 
 - Simple and fast
