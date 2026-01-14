@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Naive Bayes Algorithm
+title: Naive Bayes Classifier
 description: A Complete Guide with Example and Python Code
-thumbnail: /assets/images/ml/naive-bayes.png
+thumbnail: /assets/images/ml/naive-bayes-classifier.png
 author: Dipak Pulami Magar
 date:   2025-01-14 08:12:45 +0545
 categories: ml supervised classification
