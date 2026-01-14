@@ -1,6 +1,3 @@
-# Naive Bayes Algorithm
-## A Complete Guide with Example and Python Code
-
 ---
 layout: post
 title: Naive Bayes Algorithm
