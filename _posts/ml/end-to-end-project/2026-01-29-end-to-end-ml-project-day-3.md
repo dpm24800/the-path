@@ -288,7 +288,8 @@ The brutal truth: **Models are disposable. Pipelines are permanent.** A well-eng
 ---
 
 *Follow my end-to-end ML journey: [GitHub Repo Link](https://github.com/dpm24800/e2e-ml-project)*  
-*Day 3 complete. Data bloodstream flowing. Tomorrow: the brains (model training) arrive.*
+*Day 3 complete. Data bloodstream flowing.*  
+*Tomorrow: the brains (model training) arrive.*
 
 ---
 
