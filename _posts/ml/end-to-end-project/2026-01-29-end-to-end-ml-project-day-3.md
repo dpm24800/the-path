@@ -8,7 +8,7 @@ date:   2026-01-28 5:12:45 +0545
 categories: ml e2e-project
 status: draft
 ---
-*No models trained yet. But today, I built the data bloodstream (the flow of data through your ML system) that will feed every future prediction.*
+*No models trained yet. But today, I built the data bloodstream (=the flow of data through your ML system) that will feed every future prediction.*
 
 Yesterday I gave my project a nervous system (logging + exceptions). Today I built its **circulatory system** (=the infrastructure that moves data reliably)—the components that move raw data through cleaning, transformation, and into model-ready form. Still no algorithms. Still no accuracy metrics. But without this foundation? Any model I train tomorrow would be built on quicksand.
 
