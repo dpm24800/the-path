@@ -605,8 +605,8 @@ The complete project is deployed and accessible via Streamlit Cloud, demonstrati
 
 ---
 
-*Project Repository: [GitHub Link]*
-*Live Deployment: [Streamlit Cloud URL](https://dpm24800-ml-project.streamlit.app/)*
+*Project Repository: [GitHub Link](https://github.com/dpm24800/e2e-ml-project)*  
+*Live Deployment: [Streamlit Cloud URL](https://dpm24800-ml-project.streamlit.app/)*  
 *Completion Date: February 01, 2026*
 
 ---
