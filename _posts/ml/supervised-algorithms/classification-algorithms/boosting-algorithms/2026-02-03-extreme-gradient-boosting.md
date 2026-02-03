@@ -4,7 +4,7 @@ title: XGBoost (eXtreme Gradient Boosting)
 description: Everything You Need to Know (with Code Examples)
 thumbnail: /assets/images/ml/supervised-learning/xgboost.png
 author: Dipak Pulami Magar
-date:   2026-02-02 10:12:45 +0545
+date:   2026-02-03 10:12:45 +0545
 categories: ml supervised-learning
 status: draft
 ---
