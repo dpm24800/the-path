@@ -1,10 +1,10 @@
 ---
 layout: post
 author: Dipak Pulami Magar
-title:  Fix: Airplane Mode Keeps Turning ON and OFF Automatically (on Windows)
-youtube: https://www.youtube.com/watch?v=bgmfiENIkuc
+title: How to Fix the Airplane Mode Loop Bug on Windows Laptops
+# youtube: https://www.youtube.com/watch?v=bgmfiENIkuc
 date:   2026-02-07 10:12:45 +0545
-categories: dhamma hh
+categories: windows troubleshooting
 status: published
 ---
 
