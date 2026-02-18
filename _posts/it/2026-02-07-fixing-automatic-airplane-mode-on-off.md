@@ -4,7 +4,7 @@ author: Dipak Pulami Magar
 title: How to Fix the Airplane Mode Loop Bug on Windows Laptops
 # youtube: https://www.youtube.com/watch?v=bgmfiENIkuc
 date:   2026-02-07 10:12:45 +0545
-categories: windows troubleshooting
+categories: windows
 status: published
 ---
 
