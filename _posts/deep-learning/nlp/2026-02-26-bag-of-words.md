@@ -2,7 +2,7 @@
 layout: post
 title:  Bag of Words (BoW)
 description: 
-# thumbnail: ../../../../../assets/Correl.png
+thumbnail: ../../../../assets/images/deep-learning/nlp/bow.png
 author: Dipak Pulami Magar
 date:   2026-02-25 13:12:45 +0545
 categories: deep-learning nlp
