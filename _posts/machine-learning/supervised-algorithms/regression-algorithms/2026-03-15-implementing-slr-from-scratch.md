@@ -1136,6 +1136,8 @@ Epoch |  Init W  |  Init B  |           Pred y               |    MSE     |   Gr
  15   |  2.0612  |  0.5916  | [2.65, 4.71, 6.78, 8.84, 10.90] |   0.0581   |  -1.1051   |  -0.4499   |  2.0722  |  0.5961 
 ```
 
-Charts:
-![Linear Regression Learning Over Epochs](/assets/images/posts/machine-learning/supervised-algorithms/regression-algorithms/linear-regression-learning-over-epochs.png)
-![MSE Decrease Over Epochs](/assets/images/posts/machine-learning/supervised-algorithms/regression-algorithms/mse-decrease-over-epochs.png)
+**Charts**:
+![Linear Regression Learning Over Epochs](/assets/images/machine-learning/supervised-algorithms/regression-algorithms/linear-regression-learning-over-epochs.png)
+
+
+![MSE Decrease Over Epochs](/assets/images/machine-learning/supervised-algorithms/regression-algorithms/mse-decrease-over-epochs.png)
