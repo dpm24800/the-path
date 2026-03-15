@@ -86,6 +86,8 @@ PLATFORMS
   x64-mingw-ucrt
 
 DEPENDENCIES
+  jekyll
+  kramdown-parser-gfm
   minima!
 
 BUNDLED WITH
