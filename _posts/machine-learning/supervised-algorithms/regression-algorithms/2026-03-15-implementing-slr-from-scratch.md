@@ -2,13 +2,12 @@
 layout: post
 title: Implementing Simple Linear Regression from Scratch
 description: A Complete Guide with Example and Python Code
-thumbnail: /assets/images/machine-learning/slr-from-scratch.png
+thumbnail: /assets/images/machine-learning/supervised-learning/slr-from-scratch.png
 author: Dipak Pulami Magar
 date:   2026-03-15 08:12:45 +0545
 categories: machine-learning supervised regression
 status: draft
 ---
-
 
 <!-- # Implementing Simple Linear Regression from Scratch -->
 
