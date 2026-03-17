@@ -39,7 +39,7 @@ If you need to make sense of large amounts of diverse data without previous cate
 
 ### The Core Concept
 
-**K-Means** is a specific, popular **partitioning-based clustering algorithm**. Its objective is to divide a dataset into $$K$$ distinct, non-overlapping subsets (clusters) based on the similarity of the data points.
+**K-Means** is a specific, popular **partitioning-based clustering algorithm**. Its objective is to divide a dataset into $K$ distinct, non-overlapping subsets (clusters) based on the similarity of the data points.
 
 ### The Objective Function
 
@@ -58,29 +58,29 @@ The beauty of K-Means lies in its simple, iterative process. Here is how it func
 
 ### Step 1: Choose K
 
-The first and most critical decision is deciding the number of clusters, $$K$$. We will discuss how to choose this optimally later.
+The first and most critical decision is deciding the number of clusters, $K$. We will discuss how to choose this optimally later.
 
 ### Step 2: Initialize Centroids
 
-K-Means starts by placing $$K$$ points into the feature space. These initial points are called **centroids** (the centers of the clusters).
+K-Means starts by placing $K$ points into the feature space. These initial points are called **centroids** (the centers of the clusters).
 
-* They can be initialized **randomly** by picking $$K$$ random data points from the dataset.
+* They can be initialized **randomly** by picking $K$ random data points from the dataset.
 * Better methods exist, such as **K-Means++**, which initializes centroids far apart from each other, speeding up convergence and avoiding bad local optima.
 
 ### Step 3: Assign Points
 
 This is the optimization part. For every single data point in your entire dataset:
 
-1.  Calculate its distance to all $$K$$ centroids.
+1.  Calculate its distance to all $K$ centroids.
 2.  Assign the point to the cluster of the **nearest** centroid.
 
-A point is assigned to Cluster $$j$$ if the distance to Centroid $$j$$ is the minimum among all centroid distances.
+A point is assigned to Cluster $j$ if the distance to Centroid $j$ is the minimum among all centroid distances.
 
 ### Step 4: Recalculate Centroids
 
 Now that points are assigned, each centroid must find the "true center" of its newly assigned members. The position of each centroid is updated by calculating the **mean (average) of all data points** that are currently members of that cluster.
 
-If a cluster has points $$P_1, P_2, \dots, P_n$$, the new centroid is:
+If a cluster has points $P_1, P_2, \dots, P_n$, the new centroid is:
 $$C_{new} = \left(\frac{1}{n} \sum P_{ix}, \frac{1}{n} \sum P_{iy}\right)$$
 
 ### Step 5: Repeat Until Convergence
@@ -93,16 +93,16 @@ Steps 3 and 4 are repeated (iterated) until **convergence**. Convergence is reac
 
 concept is good, but math makes it real. Let’s walk through the exact data provided in the example above.
 
-We will use **Euclidean Distance** as our measure of similarity. For two points $$(x_1, y_1)$$ and $$(x_2, y_2)$$, the distance $$d$$ is:
+We will use **Euclidean Distance** as our measure of similarity. For two points $(x_1, y_1)$ and $(x_2, y_2)$, the distance $d$ is:
 $$d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$$
 
 ### Dataset and Initial Conditions
 
-* **Data Points:** $$\{A1(2,10), A2(2,5), A3(8,4), B1(5,8), B2(7,5), B3(6,4), C1(1,2), C2(4,9)\}$$
-* **Initial Centroids:** We choose $$K=3$$ and start with specific (fixed) points:
-    * **Centroid A:** $$(2, 10)$$
-    * **Centroid B:** $$(5, 8)$$
-    * **Centroid C:** $$(1, 2)$$
+* **Data Points:** $\{A1(2,10), A2(2,5), A3(8,4), B1(5,8), B2(7,5), B3(6,4), C1(1,2), C2(4,9)\}$
+* **Initial Centroids:** We choose $K=3$ and start with specific (fixed) points:
+    * **Centroid A:** $(2, 10)$
+    * **Centroid B:** $(5, 8)$
+    * **Centroid C:** $(1, 2)$
 
 ---
 
@@ -124,21 +124,21 @@ We calculate the distance of all 8 points to these 3 initial centroids.
 | **C2** | 4 | 9 | 2.236 | **1.414** | 7.616 | **B** (Moved!) |
 
 **Analysis of Iteration 1:**
-* Point **A2** is closest to Centroid C ($$3.162$$), not A ($$5.000$$), so it joins Cluster C.
-* Point **C2** is closest to Centroid B ($$1.414$$), not C ($$7.616$$), so it joins Cluster B.
+* Point **A2** is closest to Centroid C ($3.162$), not A ($5.000$), so it joins Cluster C.
+* Point **C2** is closest to Centroid B ($1.414$), not C ($7.616$), so it joins Cluster B.
 
 ### Recalculating New Centroids for Iteration 2
 
 Since points moved, we must re-calculate the means of the new groupings:
 
-* **New Group A:** $$\{A1\}$$ -> Mean: **(2, 10)**
-* **New Group B:** $$\{A3, B1, B2, B3, C2\}$$
-    * $$x = \frac{8+5+7+6+4}{5} = 6.0$$
-    * $$y = \frac{4+8+5+4+9}{5} = 6.0$$
+* **New Group A:** $\{A1\}$ -> Mean: **(2, 10)**
+* **New Group B:** $\{A3, B1, B2, B3, C2\}$
+    * $x = \frac{8+5+7+6+4}{5} = 6.0$
+    * $y = \frac{4+8+5+4+9}{5} = 6.0$
     * New Centroid B: **(6, 6)**
-* **New Group C:** $$\{A2, C1\}$$
-    * $$x = \frac{2+1}{2} = 1.5$$
-    * $$y = \frac{5+2}{2} = 3.5$$
+* **New Group C:** $\{A2, C1\}$
+    * $x = \frac{2+1}{2} = 1.5$
+    * $y = \frac{5+2}{2} = 3.5$
     * New Centroid C: **(1.5, 3.5)**
 
 ---
@@ -161,13 +161,13 @@ We use these updated centroids to recalculate all distances.
 | **C2** | 4 | 9 | **2.236** | 3.606 | 6.042 | **A** (Moved!) |
 
 **Analysis of Iteration 2:**
-* **C2** has shifted again! Centroid B moved far to the right (to $$x=6.0$$), and Centroid C moved slightly up. Point C2 $$(4,9)$$ is now much closer to Centroid A $$(2,10)$$ at $$2.236$$ than to Centroid B $$(3.606)$$. It joins Cluster A.
+* **C2** has shifted again! Centroid B moved far to the right (to $x=6.0$), and Centroid C moved slightly up. Point C2 $(4,9)$ is now much closer to Centroid A $(2,10)$ at $2.236$ than to Centroid B $(3.606)$. It joins Cluster A.
 
 ### Recalculating New Centroids for Iteration 3
 
-* **New Group A:** $$\{A1, C2\}$$ -> $$x=\frac{2+4}{2}=3.0$$, $$y=\frac{10+9}{2}=9.5$$ -> Centroid: **(3.0, 9.5)**
-* **New Group B:** $$\{A3, B1, B2, B3\}$$ -> $$x=\frac{8+5+7+6}{4}=6.5$$, $$y=\frac{4+8+5+4}{4}=5.25$$ -> Centroid: **(6.5, 5.25)**
-* **New Group C:** $$\{A2, C1\}$$ -> **(1.5, 3.5)** (unchanged)
+* **New Group A:** $\{A1, C2\}$ -> $x=\frac{2+4}{2}=3.0$, $y=\frac{10+9}{2}=9.5$ -> Centroid: **(3.0, 9.5)**
+* **New Group B:** $\{A3, B1, B2, B3\}$ -> $x=\frac{8+5+7+6}{4}=6.5$, $y=\frac{4+8+5+4}{4}=5.25$ -> Centroid: **(6.5, 5.25)**
+* **New Group C:** $\{A2, C1\}$ -> **(1.5, 3.5)** (unchanged)
 
 ---
 
@@ -189,26 +189,26 @@ We perform the distance check one more time.
 | **C2** | 4 | 9 | **1.118** | 4.507 | 6.042 | **A** |
 
 **Analysis of Iteration 3:**
-* Another shift! **B1** $$(5,8)$$ was originally in Cluster B, but as the centroids shifted, it became significantly closer to the new Centroid A $$(2.500)$$ than to the new Centroid B $$(3.132)$$. It joins Cluster A.
+* Another shift! **B1** $(5,8)$ was originally in Cluster B, but as the centroids shifted, it became significantly closer to the new Centroid A $(2.500)$ than to the new Centroid B $(3.132)$. It joins Cluster A.
 
 ### Recalculating New Centroids for Iteration 4
 
-* **New Group A:** $$\{A1, B1, C2\}$$ -> $$x \approx 3.667$$, $$y=9.0$$ -> Centroid: **(3.667, 9.0)**
-* **New Group B:** $$\{A3, B2, B3\}$$ -> $$x=7.0$$, $$y \approx 4.333$$ -> Centroid: **(7.0, 4.333)**
-* **New Group C:** $$\{A2, C1\}$$ -> **(1.5, 3.5)** (unchanged)
+* **New Group A:** $\{A1, B1, C2\}$ -> $x \approx 3.667$, $y=9.0$ -> Centroid: **(3.667, 9.0)**
+* **New Group B:** $\{A3, B2, B3\}$ -> $x=7.0$, $y \approx 4.333$ -> Centroid: **(7.0, 4.333)**
+* **New Group C:** $\{A2, C1\}$ -> **(1.5, 3.5)** (unchanged)
 
 ---
 
 ### **Iteration 4 (Final Check)**
 
-Because we calculate new distances again for this step, but **none of the cluster assignments change** from Iteration 3. For example, B1 remains closest to Centroid A ($$1.667$$), not Centroid B ($$4.216$$).
+Because we calculate new distances again for this step, but **none of the cluster assignments change** from Iteration 3. For example, B1 remains closest to Centroid A ($1.667$), not Centroid B ($4.216$).
 
 Since the assignments (and thus the centroids) are exactly the same as the previous step, the algorithm is **stable and converged**.
 
 **Final Summary:**
-* **Cluster A** $$\{A1, B1, C2\}$$ — Centroid **(3.67, 9.00)**
-* **Cluster B** $$\{A3, B2, B3\}$$ — Centroid **(7.00, 4.33)**
-* **Cluster C** $$\{A2, C1\}$$ — Centroid **(1.50, 3.50)**
+* **Cluster A** $\{A1, B1, C2\}$ — Centroid **(3.67, 9.00)**
+* **Cluster B** $\{A3, B2, B3\}$ — Centroid **(7.00, 4.33)**
+* **Cluster C** $\{A2, C1\}$ — Centroid **(1.50, 3.50)**
 
 This mathematical journey shows exactly how points move from initial fixed points to find their final clusters over 4 iterations.
 
@@ -388,16 +388,16 @@ In the previous sections, we walked through the mechanics of K-Means using a sma
 
 ### Choosing the Right K: The Elbow Method
 
-The most common question in clustering is: *"How many clusters ($$K$$) should I use?"* To solve this, we track the **Within-Cluster Sum of Squares (WCSS)**. This metric calculates the sum of the squared distances between each data point and its assigned cluster centroid. Mathematically, it looks like this:
+The most common question in clustering is: *"How many clusters ($K$) should I use?"* To solve this, we track the **Within-Cluster Sum of Squares (WCSS)**. This metric calculates the sum of the squared distances between each data point and its assigned cluster centroid. Mathematically, it looks like this:
 
 $$WCSS = \sum_{i=1}^{K} \sum_{P \in Cluster_i} \text{dist}(P, Centroid_i)^2$$
 
 **The Logic:**
 * We want WCSS to be **low**, as a low value means points are very close to their centers (high density).
-* However, as $$K$$ increases, WCSS naturally drops. If we have $$10$$ points and set $$K=10$$, WCSS becomes $$0$$ because every point is its own centroid. This isn't helpful—it's **overfitting**.
+* However, as $K$ increases, WCSS naturally drops. If we have $10$ points and set $$K=10$$, WCSS becomes $$0$$ because every point is its own centroid. This isn't helpful—it's **overfitting**.
 
 #### The "Sweet Spot" Example
-Think of the Elbow Method like a cost-benefit analysis. When you plot WCSS against $$K$$, the graph typically looks like an arm. 
+Think of the Elbow Method like a cost-benefit analysis. When you plot WCSS against $K$, the graph typically looks like an arm. 
 
 
 1.  **The Drop:** From $$K=1$$ to $$K=3$$, you usually see a massive drop in WCSS. This indicates that adding these clusters is significantly improving the model.
@@ -446,13 +446,13 @@ You are now equipped with both the theoretical "why" and the technical "how" of 
 
 <!-- ## 6. Metrics and Choosing the Right K
 
-How do we know if our K-Means model is working well? And how do we choose the optimal value of $$K$$ in the first place? In a real-world scenario, you don't know the labels, so you must use internal metrics.
+How do we know if our K-Means model is working well? And how do we choose the optimal value of $K$ in the first place? In a real-world scenario, you don't know the labels, so you must use internal metrics.
 
 ### Choosing the Right K: The Elbow Method
 
 We know that decreasing intra-cluster distance is a good thing. K-Means attempts to minimize **Within-Cluster Sum of Squares (WCSS)**. WCSS is the sum of squared distances of each data point to its closest centroid.
 
-As $$K$$ (the number of clusters) increases, WCSS will always decrease (because with more centroids, every point can be closer to a center). If $$K=N$$ (number of data points), WCSS will be zero.
+As $K$ (the number of clusters) increases, WCSS will always decrease (because with more centroids, every point can be closer to a center). If $K=N$ (number of data points), WCSS will be zero.
 
 [Image: An Elbow Method plot showing WCSS vs K]
 
@@ -478,12 +478,12 @@ The **Silhouette Score** is a sophisticated metric that measures how well data p
 
 ### Calculating the Silhouette Score
 
-For any given data point, the Silhouette Coefficient $$s$$ is calculated as:
+For any given data point, the Silhouette Coefficient $s$ is calculated as:
 $$s = \frac{b - a}{\max(a, b)}$$
 
-* $$s = +1$$: The point is far from neighboring clusters and very close to its own cluster (excellent separation).
-* $$s = 0$$: The point is very close to the boundary between clusters (poor separation).
-* $$s = -1$$: The point is likely assigned to the wrong cluster (very poor assignment).
+* $s = +1$: The point is far from neighboring clusters and very close to its own cluster (excellent separation).
+* $s = 0$: The point is very close to the boundary between clusters (poor separation).
+* $s = -1$: The point is likely assigned to the wrong cluster (very poor assignment).
 
 The **Silhouette Score** for the entire model is the average of the silhouette coefficients of all data points. A higher average silhouette score indicates that clusters are denser and better separated.
 
@@ -491,7 +491,7 @@ The **Silhouette Score** for the entire model is the average of the silhouette c
 
 ## Final Thoughts
 
-K-Means Clustering is an essential tool in your machine learning arsenal. You have seen exactly how it partitions data into $$K$$ similar groups, maximizing density within clusters and separation between them.
+K-Means Clustering is an essential tool in your machine learning arsenal. You have seen exactly how it partitions data into $K$ similar groups, maximizing density within clusters and separation between them.
 
 We explored the conceptual model, tracked the exact path of individual data points manually as they migrated between clusters over 4 iterations, saw the full code implemented from scratch, and learned how to use sophisticated metrics like the Elbow Method and Silhouette Score to find the best possible structure for unlabeled data.
 
@@ -499,3 +499,5 @@ You are now equipped to apply K-Means and truly understand the math happening un
 
 Happy clustering!
 *** -->
+
+
