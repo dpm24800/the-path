@@ -2,10 +2,10 @@
 layout: post
 title: Feature Scaling
 # description: 
-thumbnail: /assets/images/ml/feature-scaling.png
+thumbnail: /assets/images/machine-learning/feature-scaling.png
 author: Dipak Pulami Magar
 date:   2025-12-10 10:12:45 +0545
-categories: ml
+categories: machine-learning
 status: draft
 ---
 

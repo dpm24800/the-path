@@ -2,10 +2,10 @@
 layout: post
 title: Day 3 of My End-to-End ML Project
 description: Where Raw Data Meets Production Pipeline
-thumbnail: /assets/images/ml/e2e-projects/project-1/day-3.png
+thumbnail: /assets/images/machine-learning/e2e-projects/project-1/day-3.png
 author: Dipak Pulami Magar
 date:   2026-01-28 5:12:45 +0545
-categories: ml e2e-project
+categories: machine-learning e2e-project
 status: draft
 ---
 *No models trained yet. But today, I built the data bloodstream (=the flow of data through your ML system) that will feed every future prediction.*

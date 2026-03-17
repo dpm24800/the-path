@@ -2,10 +2,10 @@
 layout: post
 title: Cross Validation
 # description: 
-thumbnail: ../../../../assets/images/ml/cross-validation.png
+thumbnail: /assets/images/machine-learning/cross-validation.png
 author: Dipak Pulami Magar
 date:   2025-12-09 11:12:45 +0545
-categories: ml
+categories: machine-learning
 status: draft
 ---
 

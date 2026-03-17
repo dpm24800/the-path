@@ -2,10 +2,10 @@
 layout: post
 title: Day 1 of My End-to-End ML Project
 description: Laying the Foundation Right # Starting an end-to-end machine learning journey, one commit at a time
-thumbnail: /assets/images/ml/e2e-projects/project-1/day-1.png
+thumbnail: /assets/images/machine-learning/e2e-projects/project-1/day-1.png
 author: Dipak Pulami Magar
 date:   2026-01-27 3:12:45 +0545
-categories: ml e2e-project
+categories: machine-learning e2e-project
 status: draft
 ---
 Today marks the beginning of an exciting journey: building a production-ready machine learning system from scratch. No notebooks flying around. No dependency chaos. Just clean, reproducible engineering practices from Day 1. Here's what I accomplished—and why each step matters more than you might think.

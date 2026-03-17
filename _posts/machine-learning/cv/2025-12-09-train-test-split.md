@@ -2,10 +2,10 @@
 layout: post
 title: Train–Test Split (Hold-Out Method)
 # description: 
-thumbnail: ../../../../assets/images/ml/train-test-split.png
+thumbnail: /assets/images/machine-learning/train-test-split.png
 author: Dipak Pulami Magar
 date:   2025-12-09 10:12:45 +0545
-categories: ml
+categories: machine-learning
 status: draft
 ---
 

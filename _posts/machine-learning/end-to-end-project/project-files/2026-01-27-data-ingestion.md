@@ -5,7 +5,7 @@ title: Understanding data_ingestion.py
 # thumbnail: /assets/images/ml/e2e-projects/project-1/day-1.png
 author: Dipak Pulami Magar
 date:   2026-01-27 14:12:45 +0545
-categories: ml e2e-project
+categories: machine-learning e2e-project
 status: draft
 ---
 

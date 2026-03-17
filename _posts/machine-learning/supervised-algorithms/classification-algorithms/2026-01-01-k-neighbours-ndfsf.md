@@ -2,10 +2,10 @@
 layout: post
 title: K-Nearest Neighbors (KNN) Algorithm
 # description: A Complete Guide
-# thumbnail: /assets/images/ml/dfsfdfsdffier.png
+# thumbnail: /assets/images/machine-learning/dfsfdfsdffier.png
 author: Dipak Pulami Magar
 date:   2026-01-14 08:12:45 +0545
-categories: ml supervised classification
+categories: machine-learning supervised classification
 status: draft
 ---
 

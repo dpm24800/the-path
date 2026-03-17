@@ -2,10 +2,10 @@
 layout: post
 title: Feature Scaling
 # description: 
-thumbnail: /assets/images/ml/feature-scaling.png
+thumbnail: /assets/images/machine-learning/feature-scaling.png
 author: Dipak Pulami Magar
 date:   2025-12-17 3:12:45 +0545
-categories: ml
+categories: machine-learning
 status: draft
 ---
 - Feature scaling in machine learning is a crucial preprocessing step that transforms numerical features to a common scale (like 0-1 or mean=0, std=1) to prevent features with larger ranges (e.g., income) from dominating those with smaller ranges (e.g., age), ensuring algorithms treat all features equally, converge faster (like neural networks), and distance-based models (like KNN) perform accurately. 

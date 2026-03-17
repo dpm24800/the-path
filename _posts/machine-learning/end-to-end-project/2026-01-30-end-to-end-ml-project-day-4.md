@@ -2,10 +2,10 @@
 layout: post
 title: Day 4 of My End-to-End ML Project
 description: The Algorithm Zoo and Its Keeper
-thumbnail: /assets/images/ml/e2e-projects/project-1/day-4.png
+thumbnail: /assets/images/machine-learning/e2e-projects/project-1/day-4.png
 author: Dipak Pulami Magar
 date:   2026-01-30 10:12:45 +0545
-categories: ml e2e-project
+categories: machine-learning e2e-project
 status: draft
 ---
 

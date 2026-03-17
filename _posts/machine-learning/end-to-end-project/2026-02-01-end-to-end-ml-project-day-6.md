@@ -2,10 +2,10 @@
 layout: post
 title: Day 6 of My End-to-End ML Project
 description: Web Deployment and Production Serving # The Conductor Arrives
-thumbnail: /assets/images/ml/e2e-projects/project-1/day-6.png
+thumbnail: /assets/images/machine-learning/e2e-projects/project-1/day-6.png
 author: Dipak Pulami Magar
 date:   2026-01-31 10:12:45 +0545
-categories: ml e2e-project
+categories: machine-learning e2e-project
 status: draft
 ---
 *Implementing Flask API for local testing and Streamlit application for cloud deployment*

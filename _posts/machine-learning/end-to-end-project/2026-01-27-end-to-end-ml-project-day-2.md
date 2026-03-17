@@ -2,10 +2,10 @@
 layout: post
 title: Day 2 of My End-to-End ML Project
 description: Building the Nervous System # Where visibility meets resilience - logging and error handling before a single line of ML code
-thumbnail: /assets/images/ml/e2e-projects/project-1/day-2.png
+thumbnail: /assets/images/machine-learning/e2e-projects/project-1/day-2.png
 author: Dipak Pulami Magar
 date:   2026-01-27 13:12:45 +0545
-categories: ml e2e-project
+categories: machine-learning e2e-project
 status: draft
 ---
 
