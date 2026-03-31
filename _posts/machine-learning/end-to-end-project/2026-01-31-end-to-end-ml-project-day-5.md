@@ -409,7 +409,7 @@ The brutal truth: **In production ML, pipeline reliability compounds; model accu
 
 ---
 
-*Follow my end-to-end ML journey: [GitHub Repo Link](https://github.com/dpm24800/e2e-ml-project)*  
+*Follow my end-to-end ML journey: [GitHub Repo Link](https://github.com/dpm24800/student-performance-predictor)*  
 *Day 5 complete. Conductor arrived.*  
 *Symphony plays. Tomorrow: the user interface and deployment.*
 

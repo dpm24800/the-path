@@ -37,7 +37,7 @@ categories: numpy
 
 NumPy Arrays can be created with a couple of methods, here are common ones:
 
-## 1. From Python (Data) Structures ✅
+## 1. From Python (Data) Structures
 The **`np.array()`** function creates an array of various dimensions from a Python list or tuple.
 
 **Syntax**: `np.array([list])` or `np.array((tuple))`
@@ -71,7 +71,7 @@ See more on: [Dimensions of Array](/my-dsai-journey/numpy/2025/11/03/array-attri
 http://127.0.0.1:4000/my-dsai-journey/numpy/2025/11/02/numpy/2025/11/03/array-attributes.html#array-dimensions-arrayndim
 
 ## 2. Initial Placeholders
-### 1. np.zeros(shape) ✅
+### 1. np.zeros(shape)
 The `np.zeros()` function creates an array of a specified **shape** filled entirely with **zeros**.
 
 * **Syntax:** `np.zeros(shape, dtype=None)`
@@ -177,7 +177,7 @@ Output,
    [0 0 0 0 0]]]]
 ```
 
-### 2. np.ones(shape) ✅
+### 2. np.ones(shape)
 The `np.ones()` function creates an array of a specified **shape** filled entirely with **ones**.
 
 * **Syntax:** `np.ones(shape, dtype=None)`
@@ -277,7 +277,7 @@ Output,
    [1 1 1 1 1]
    [1 1 1 1 1]]]]
 ```
-### 3. np.full(shape, fill_value) ✅
+### 3. np.full(shape, fill_value)
 The **`np.full()`** function creates an array of a given *shape* and fills it with a *specified constant value*.  
 
 **Syntax**: `np.full(shape, fill_value, dtype=None)`
@@ -601,7 +601,7 @@ np.arange(1, 121).reshape(2, 3, 4, 5):
    [116 117 118 119 120]]]]
 ```
 
-## 4. Linearly spaced values: np.linspace() ✅
+## 4. Linearly spaced values: np.linspace()
 The **`np.linspace()`** function creates an array with a **specified number of evenly spaced values** between a **start** and **stop** value (inclusive by default).
 
 **Syntax**: 

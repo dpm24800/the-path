@@ -268,7 +268,7 @@ No more black boxes. Every byte of data will be *observed* and *accounted for*. 
 
 ---
 
-*Follow my end-to-end ML journey: [GitHub Repo Link](https://github.com/dpm24800/e2e-ml-project)*  
+*Follow my end-to-end ML journey: [GitHub Repo Link](https://github.com/dpm24800/student-performance-predictor)*  
 *Day 2 complete. Nervous system online. Tomorrow: data injection with full observability.*
 
 ---

@@ -293,7 +293,7 @@ The brutal truth: **Models are disposable. Pipelines are permanent.** A well-eng
 
 ---
 
-*Follow my end-to-end ML journey: [GitHub Repo Link](https://github.com/dpm24800/e2e-ml-project)*
+*Follow my end-to-end ML journey: [GitHub Repo Link](https://github.com/dpm24800/student-performance-predictor)*
 *Day 3 complete. Data bloodstream flowing.*
 *Tomorrow: the brains (model training) arrive.*
 

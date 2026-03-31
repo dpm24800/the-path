@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Introducing NumPy"
-date:   2025-11-02 10:12:45 +0545
+date:   2025-11-01 10:12:45 +0545
 categories: numpy
 ---
 
@@ -51,10 +51,10 @@ Due to following key features, NumPy is widely used:
     - all elements share the same data type and don't require type-checking for every element.
     - they use contiguous memory.
 
-- **Rich Functionality**: ✅
+- **Rich Functionality**: 
   - It provides a vast library (of rich functionality) with hundreds of built-in mathematical functions for tasks such as linear algebra, Fourier transforms, random number generation, statistical operations etc.
 
-- **Foundation for other libraries**: ✅
+- **Foundation for other libraries**: 
   - As the core library for scientific computing in Python, NumPy serves as the foundation for many popular libraries including Pandas, Matplotlib, Scikit-learn, TensorFlow, PyTorch, and SciPy, all of which rely on its powerful array structure.
 
 - **Interoperability**: The de-facto standard for array exchange in the Python data ecosystem (Pandas, Scikit-learn, Matplotlib all build on it).
