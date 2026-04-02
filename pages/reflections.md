@@ -3,8 +3,8 @@ layout: page
 title: Reflections
 date: 2025-11-01 21:12:45 +0545
 nav_order: 4
-nav_exclude: true
-permalink: /reflectiosn/
+nav_exclude: false
+permalink: /reflections/
 ---
 
 ## Reflections
