@@ -15,3 +15,6 @@ permalink: /dhamma/
 2. [True Meaning of Anicca](dhamma/2025/11/06/true-meaning-of-anicca.html)
 3. [True Meaning of Anicca](dhamma/2025/11/06/true-meaning-of-anicca.html)
 4. [True Meaning of Anicca](dhamma/2025/11/06/true-meaning-of-anicca.html) -->
+
+## Reflections
+1. [Reflections](dhamma/2026/04/02/reflection.html)
